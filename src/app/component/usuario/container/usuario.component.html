@@ -1,0 +1,9 @@
+<div class="row">
+    <!-- .col -->
+    <div class="col-md-6 col-lg-6 col-xlg-4"  *ngFor="let item of usuarios" >
+        <div class="card card-body">
+            <app-usuario-item [usuario]="item"></app-usuario-item>
+        </div>
+    </div>
+    <!-- /.col -->
+</div>
