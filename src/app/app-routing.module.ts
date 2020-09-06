@@ -8,18 +8,14 @@ import { RegisterComponent } from './auth/register/register.component';
 
 export const Approutes: Routes = [
     {
-        path: 'login',
-        component: LoginComponent,
-    },
-    {
-        path: 'register',
-        component: RegisterComponent,
+      path: 'login',
+      component: LoginComponent  
     },
     {
         path: '',
         component: FullComponent,
         children: [
-            { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+            // { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
             {
                 path: 'dashboard',
                 loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
@@ -30,8 +26,8 @@ export const Approutes: Routes = [
             }
         ]
     },
-    {
-        path: '**',
-        redirectTo: '/dashboard'
-    }
+    // {
+    //     path: '**',
+    //     redirectTo: '/dashboard'
+    // }
 ];

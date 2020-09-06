@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, OnInit } from '@angular/core';
-import { DashboardService } from '../services/dashboard.service';
+import { DashboardService } from './services/dashboard.service';
 @Component({
     templateUrl: './dashboard.component.html'
 })

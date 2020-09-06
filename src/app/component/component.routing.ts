@@ -214,6 +214,7 @@ export const ComponentsRoutes: Routes = [
 				component: UsuarioComponent,
 				data: {
 					title: 'Usuarios',
+					
 				}
 			}
 		]

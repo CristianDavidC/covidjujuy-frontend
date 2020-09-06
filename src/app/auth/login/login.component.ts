@@ -1,6 +1,7 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
+import { AuthService } from 'app/services/auth.service';
 // import { UsuarioService } from '../../services/usuario.service';
 // import Swal from 'sweetalert2';
 
@@ -26,6 +27,7 @@ export class LoginComponent implements OnInit {
   constructor( private router: Router,
                private fb: FormBuilder,
             //    private usuarioService: UsuarioService,
+               private authService: AuthService,
                private ngZone: NgZone ) { }
 
   ngOnInit(): void {
@@ -34,7 +36,11 @@ export class LoginComponent implements OnInit {
 
 
   login() {
-
+    this.authService.login().subscribe(x => {
+      if (x) {
+        this.router.navigateByUrl('/dashboard');
+      }
+    });
     // this.usuarioService.login( this.loginForm.value )
     //   .subscribe( resp => {
 

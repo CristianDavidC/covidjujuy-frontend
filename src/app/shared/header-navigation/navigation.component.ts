@@ -6,6 +6,8 @@ import {
   NgbCarouselConfig
 } from '@ng-bootstrap/ng-bootstrap';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { AuthService } from 'app/services/auth.service';
+import { Router } from '@angular/router';
 declare var $: any;
 @Component({
   selector: 'app-navigation',
@@ -15,7 +17,11 @@ export class NavigationComponent implements AfterViewInit {
   @Output() toggleSidebar = new EventEmitter<void>();
 
   public config: PerfectScrollbarConfigInterface = {};
-  constructor(private modalService: NgbModal) {}
+  constructor(
+    private modalService: NgbModal,
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   public showSearch = false;
 
@@ -84,4 +90,9 @@ export class NavigationComponent implements AfterViewInit {
   ];
 
   ngAfterViewInit() {}
+
+  logout() {
+    this.authService.logout();
+    this.router.navigateByUrl('login');
+  }
 }

@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { ChartsModule } from 'ng2-charts';
 import { DashboardComponent } from './dashboard.component';
-import { DashboardService } from '../services/dashboard.service';
+import { DashboardService } from './services/dashboard.service';
+import { AuthGuard } from 'app/guard/auth.guard';
 
 const routes: Routes = [
     {
@@ -16,7 +17,8 @@ const routes: Routes = [
                 { title: 'Dashboard' }
             ]
         },
-        component: DashboardComponent
+        component: DashboardComponent,
+        // canActivate: [AuthGuard]
     }
 ];
 
