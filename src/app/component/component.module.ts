@@ -25,6 +25,7 @@ import { ToastComponent } from './toast/toast.component';
 import { ToastsContainer } from './toast/toast-container';
 
 import { UsuarioModule } from './usuario/usuario.module';
+import { ImportModule } from './import/import.module';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { UsuarioModule } from './usuario/usuario.module';
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
-    UsuarioModule
+    UsuarioModule,
+    ImportModule
   ],
   declarations: [
     NgbdpregressbarBasicComponent,

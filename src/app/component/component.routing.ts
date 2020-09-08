@@ -17,6 +17,7 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { CardsComponent } from './card/card.component';
 import { ToastComponent } from './toast/toast.component';
 import { UsuarioComponent } from './usuario/container/usuario.component';
+import { ImportComponent } from './import/container/import.component';
 
 export const ComponentsRoutes: Routes = [
 	{
@@ -214,6 +215,14 @@ export const ComponentsRoutes: Routes = [
 				component: UsuarioComponent,
 				data: {
 					title: 'Usuarios',
+					
+				}
+			},
+			{
+				path: 'import',
+				component: ImportComponent,
+				data: {
+					title: 'Importar archivos',
 					
 				}
 			}

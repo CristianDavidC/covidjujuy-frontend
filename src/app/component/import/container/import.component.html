@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Importar archivos SISA</h3>
+                <!-- <h6 class="card-subtitle">This is basic toggletype accordion</h6> -->
+                <div class="center">
+                    <ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)"
+                        (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+                        <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+                            <div class="d-flex flex-column align-items-center">
+                                <img class="img-responsive" style="width: 45px;" src="assets/images/icon/upload.png" alt="Upload file">
+                                
+                                <div class="d-flex justify-content-center align-items-baseline">
+                                    <p>Arrastra tus archivos aquí o examina tu ordenador</p>
+                                
+                                    <button type="button" class="btn btn-primary btn-sm ml-1" id="btn-upload"
+                                        (click)="openFileSelector()">Buscar archivos</button>
+                                </div>
+                                
+                            </div>
+                        </ng-template>
+                    </ngx-file-drop>
+                    
+                    <div class="upload-table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                </tr>
+                            </thead>
+                            <tbody class="upload-name-style">
+                                <tr *ngFor="let item of files; let i=index">
+                                    <td><strong>{{ item.relativePath }}</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="d-flex justify-content-start mt-2" *ngIf="files.length > 0">
+                        <button class="btn btn-success" (click)="importar()"> IMPORTAR
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

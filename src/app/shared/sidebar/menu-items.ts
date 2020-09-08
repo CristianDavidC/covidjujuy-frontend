@@ -32,6 +32,26 @@ export const ROUTES: RouteInfo[] = [
         submenu: []
     },
     {
+        path: '/component/usuario',
+        title: 'Usuarios',
+        icon: 'mdi mdi-message-reply-text',
+        class: '',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: []
+    },
+    {
+        path: '/component/import',
+        title: 'Importar archivos',
+        icon: 'mdi mdi-message-reply-text',
+        class: '',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: []
+    },
+    {
         path: '/component/accordion',
         title: 'Accordion',
         icon: 'mdi mdi-equal',
@@ -173,16 +193,6 @@ export const ROUTES: RouteInfo[] = [
     {
         path: '/component/toast',
         title: 'Toast',
-        icon: 'mdi mdi-message-reply-text',
-        class: '',
-        label: '',
-        labelClass: '',
-        extralink: false,
-        submenu: []
-    },
-    {
-        path: '/component/usuario',
-        title: 'Usuarios',
         icon: 'mdi mdi-message-reply-text',
         class: '',
         label: '',
