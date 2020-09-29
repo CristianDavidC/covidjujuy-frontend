@@ -34,7 +34,7 @@ export const ROUTES: RouteInfo[] = [
     {
         path: '/component/usuario',
         title: 'Usuarios',
-        icon: 'mdi mdi-message-reply-text',
+        icon: 'mdi mdi-account',
         class: '',
         label: '',
         labelClass: '',
@@ -44,7 +44,7 @@ export const ROUTES: RouteInfo[] = [
     {
         path: '/component/import',
         title: 'Importar archivos',
-        icon: 'mdi mdi-message-reply-text',
+        icon: 'mdi mdi-upload',
         class: '',
         label: '',
         labelClass: '',

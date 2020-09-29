@@ -1,24 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Router, RouterModule } from '@angular/router';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    // RouterModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgbModule,
+    RouterModule
   ],
   exports: [
     CommonModule,
-    // RouterModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgbModule,
+    RouterModule
   ]
 })
 export class AngularModule {}

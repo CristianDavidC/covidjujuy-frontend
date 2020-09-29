@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, EventEmitter, Output } from '@angular/core';
+import { Component, AfterViewInit, EventEmitter, Output, NgZone } from '@angular/core';
 import {
   NgbModal,
   ModalDismissReasons,
@@ -20,7 +20,8 @@ export class NavigationComponent implements AfterViewInit {
   constructor(
     private modalService: NgbModal,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private ngZone: NgZone
   ) {}
 
   public showSearch = false;
@@ -93,6 +94,9 @@ export class NavigationComponent implements AfterViewInit {
 
   logout() {
     this.authService.logout();
-    this.router.navigateByUrl('login');
+    this.ngZone.run(() => {
+      this.router.navigateByUrl('/login');
+    })
+    // this.router.navigate(['/login']);
   }
 }

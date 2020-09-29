@@ -10,10 +10,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit(): void {
-        // this.dashboardService.getAllProducts().subscribe(response => {
-        //     console.log(response);
-            
-        // });
+        
     }
 
     public lineChartData1: Array<any> = [{ data: [0, 150, 110, 240, 200, 200, 300, 200, 380, 300, 400, 380], label: 'Sales' }];

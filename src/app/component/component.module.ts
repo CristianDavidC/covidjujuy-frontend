@@ -26,15 +26,17 @@ import { ToastsContainer } from './toast/toast-container';
 
 import { UsuarioModule } from './usuario/usuario.module';
 import { ImportModule } from './import/import.module';
+import { CoreModule } from '@core/core.module';
 
 
 @NgModule({
   imports: [
-    CommonModule,
+    // CommonModule,
+    // FormsModule,
+    // ReactiveFormsModule,
+    // NgbModule,
+    CoreModule,
     RouterModule.forChild(ComponentsRoutes),
-    FormsModule,
-    ReactiveFormsModule,
-    NgbModule,
     UsuarioModule,
     ImportModule
   ],

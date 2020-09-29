@@ -4,7 +4,16 @@
                 class="img-circle img-responsive"></a>
     </div>
     <div class="col-md-8 col-lg-9">
-        <h3 class="box-title m-b-0">{{ usuario.nick }}</h3>
+        <div class="d-flex">
+            <h3 class="box-title m-b-0">{{ usuario.nick }}</h3>
+            <div class="btn-group ml-auto m-t-10" ngbDropdown>
+                <a href="JavaScript:void(0)" ngbDropdownToggle class="icon-options-vertical link"></a>
+                <div class="" ngbDropdownMenu>
+                    <a class="dropdown-item" href="javascript:void(0)" (click)="edit()">Editar</a>
+                    <a class="dropdown-item" href="javascript:void(0)">Eliminar</a>
+                </div>
+            </div>
+        </div>
         <small>{{ usuario.rol }}</small>
         <address>
             <br>
